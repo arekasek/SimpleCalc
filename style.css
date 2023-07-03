@@ -1,0 +1,99 @@
+@font-face {
+    font-family: calcfont;
+    src: url(digital-7.ttf);
+    font-weight: bold;;
+  }
+
+body, html{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    animation: gradient 30s linear infinite;
+    background: linear-gradient(135deg, rgb(83, 0, 151) 0%, rgba(54,90,255,1) 6%, rgba(87,113,226,1) 12%, rgba(133,155,231,1) 27%, rgba(170,189,255,1) 48%, rgba(137,185,255,1) 63%, rgba(98,199,255,1) 79%, rgba(25,176,255,1) 90%, rgb(68, 235, 137) 100%);
+    background-size: 300% 300%;
+    background-attachment: fixed;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 65%;
+    width: 25%;
+    background-color: rgb(129, 129, 129);
+    border-radius: 2.3rem;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 23px -3px, rgba(32, 32, 32, 0.4) 0px -13px 0px inset, rgba(0, 0, 0, 0.30) 0px -50px 50px -28px inset, rgba(0, 0, 0, 0.2) 0px 22px 70px 4px;
+}
+.result{
+    overflow: hidden;
+    position: absolute;
+    top:5%;
+    padding: 2%;
+    height:15%;
+    width: 82%;
+    font-family: calcfont;
+    background-color: rgb(84, 211, 73);
+    border-radius: 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -10px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -10px 10px 0px inset, 
+    rgba(0, 0, 0, 0.1) 0px -50px 50px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 3px 2px,
+     rgba(0, 0, 0, 0.09) 0px 10px 8px, rgba(0, 0, 0, 0.09) 0px 10px 10px,  rgba(32, 32, 32, 0.4) 0px -7px 0px inset, rgba(0, 0, 0, 0.30) 0px -20px 50px -28px inset;
+}
+.result > span{
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top:20%;
+    font-size: 300%;
+    float: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap:2%;
+    position: relative;
+    top:30%;
+    height: 60%;
+    width: 86%;
+}
+.buttons > button{
+    font-size: 30pt;
+    background-color: rgb(116, 116, 116);
+    border-radius: 1rem;
+    border: 0px;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 0px 10px -2px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.buttons > button:active{
+    position: relative;
+    top: 2px;
+}
+.buttons > button:nth-child(5){
+    background-color: rgb(101, 187, 187);
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .container, .buttons, .result {
+      display: none;
+    }
+  }
